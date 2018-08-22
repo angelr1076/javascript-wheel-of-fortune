@@ -1,4 +1,4 @@
-let gameOver = false;
+
 var guessesLeft;
 var letterClicked;
 var wordArray = ["JAVASCRIPT", "ARRAYS", "FUNCTIONS", "HOISTING", "RECURSION", "EVENTS", "KEYUP", "TERNARY"];
@@ -19,7 +19,7 @@ var letterBoxes = document.querySelector("#alphabet");
 function playGame() {
     guessesLeft = 6;
     guesses.innerHTML = "You have " + guessesLeft + " guesses left";
-    // 1. Pick a random word.
+    // Pick a random word.
     wordChoice = wordArray[Math.floor(Math.random() * wordArray.length)];
 
     let hintObject = {JAVASCRIPT: "Not Java", ARRAYS: "Containers", FUNCTIONS: "Stores instructions", HOISTING: "Moving declarations to the top", RECURSION: "Calling functions inside of functions", EVENTS: "They happen to HTML elements", KEYUP: "Not 'onclick', but...", TERNARY: "Type of operator"};
@@ -30,16 +30,16 @@ function playGame() {
         answerList[i] = "_";
     }
 
-    //Display underscores on page representing each word in the random word
+    // Display underscores on page representing each word in the random word
     wordDisplay.innerHTML = answerList.join(' ');
 
-    //Display number of letters in the random word on the page
+    // Display number of letters in the random word on the page
     remainingLetters = wordChoice.length;
     letterCount.innerHTML = "The word is " + remainingLetters + 
     " letters long";
 }
 
-// 2. Take the player’s guess.
+// Take the player’s guess.
 function buttonPress(e) { 
     letterClicked = e.target.textContent;
     document.getElementById("your-guess").innerHTML = "You guessed the letter " + letterClicked;
