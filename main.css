@@ -1,0 +1,82 @@
+body {
+    margin: 0 auto;
+    width: 900px;
+    display: block;
+    background: url("http://res.cloudinary.com/angelrodriguez/image/upload/c_crop,h_624/v1534810805/wheeloffortune.jpg");
+    background-size: cover;
+    color: white;
+    text-shadow: 4px 4px 5px rgb(20, 19, 19);
+    justify-content: center;
+}
+
+#container {
+    display: block;
+    margin: 20px;
+}
+
+.welcome {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 3em;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.letters, .lives {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.hint {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 35px;
+    text-align: center;
+}
+
+#words {
+    font-family: 'Baloo Bhai', cursive;
+    justify-content: center;
+    font-size: 100px;
+    font-size: 30px;
+    margin: 10px;
+    letter-spacing: 20px;
+}
+
+#alphabet {
+    margin: 20px;
+}
+
+button {
+    display: inline-flex;
+    border: 2px solid rgb(212, 210, 221);
+    color: white;
+    background: rgb(75, 129, 104);
+    font-size: 50px;
+    border-radius: 5px;
+    font-family: 'Baloo Bhai';
+    justify-content: center;
+    box-shadow: 3px 3px 4px rgb(15, 15, 15);
+}
+
+button:hover {
+    color: rgb(75, 129, 104);
+    background: rgb(154, 192, 174);
+}
+
+button:active {
+    color: rgb(0, 0, 0);
+    background: rgb(231, 235, 233);
+    font-size: 45px;
+}
+
+#play {
+    margin: 20px;
+    font-size: 50px !important;
+}
+
+#your-guess {
+    margin: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    color: rgb(243, 239, 239);
+}
