@@ -17,6 +17,7 @@ var letterBoxes = document.querySelector("#alphabet");
 
 //Start a new game
 function playGame() {
+    
     guessesLeft = 6;
     guesses.innerHTML = "You have " + guessesLeft + " guesses left";
     // Pick a random word.
