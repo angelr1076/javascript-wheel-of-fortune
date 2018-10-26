@@ -6,55 +6,54 @@
             <title>Wheel of Fortune</title>
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
             <link rel="stylesheet" href="main.css">
-            <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Josefin+Sans" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
         </head>
         <body>
         <body>
-            <div id="container">
-                <div id="header">
-                    <p class="welcome">Welcome to Wheel of Fortune!</p>
-                    <p class="hint">Hint</p>
-                    <!-- The letters will be tied to the number of letters in the random array -->
-                    <p class="letters">There are <span id="numbers">0</span> letters in this word</p>
-                    <!-- The user will be given a number of choices and with each wrong choice, they lose a turn -->
-                    <p class="lives"><span id="guesses">0</span></p>
-                    <div id="wheel"><img id="fortune" src="http://pre07.deviantart.net/c70c/th/pre/f/2017/048/1/8/season_35_prototype_wheel_bare_by_leafman813-dazen1m.png"></div>
+                <h1 class="welcome">Welcome to Wheel of Fortune!</h1>
 
-                    <p id="words"></p><br>
-
-                    <button id="play" onclick="playGame()">Spin</button><br>
-                    <p id="your-guess">You guessed </p>
-                </div>
-            </div>
                 <div id="alphabet" onclick="buttonPress(event)">
-                    <button>A</button>
-                    <button>B</button>
-                    <button>C</button>
-                    <button>D</button>
-                    <button>E</button>
-                    <button>F</button>
-                    <button>G</button>
-                    <button>H</button>
-                    <button>I</button>
-                    <button>J</button>
-                    <button>K</button>
-                    <button>L</button>
-                    <button>M</button>
-                        <br>
-                    <button>N</button>
-                    <button>O</button>
-                    <button>P</button>
-                    <button>Q</button>
-                    <button>R</button>
-                    <button>S</button>
-                    <button>T</button>
-                    <button>U</button>
-                    <button>V</button>
-                    <button>W</button>
-                    <button>X</button>
-                    <button>Y</button>
-                    <button>Z</button>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">A</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">B</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">C</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">D</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">E</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">F</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">G</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">H</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">I</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">J</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">K</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">L</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">M</a>
+                </br>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">N</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">O</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">P</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">Q</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">R</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">S</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">T</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">U</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">V</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">W</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">X</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">Y</a>
+                    <a id="letterChoices" class="waves-effect waves-light btn-large">Z</a>
+                </div>
+                <div id="container">
+                    <div id="header">
+                        <p class="hint">Hint will display once you spin</p>
+                        <!-- The letters will be tied to the number of letters in the random array -->
+                        <p class="letters">The word is <span id="numbers">_</span> letters long</p>
+                        <!-- The user will be given a number of choices and with each wrong choice, they lose a turn -->
+                        <p class="lives"><span id="guesses">You have _ guesses remaining</span></p>
+                        <p id="words">_  _  _  _  _</p>
+                    </br>
+                        <a id="play" onclick="playGame()" class="waves-effect waves-light btn-large">Spin</a>
+                        <span id="your-guess">Letter guessed</span>
+                    </div>
                 </div>
         
             <script src="main.js"></script>

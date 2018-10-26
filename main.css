@@ -1,12 +1,9 @@
 body {
-    margin: 0 auto;
-    width: 900px;
-    display: block;
-    background: url("http://res.cloudinary.com/angelrodriguez/image/upload/c_crop,h_624/v1534810805/wheeloffortune.jpg");
-    background-size: cover;
+    background: linear-gradient(200deg, #025302, #027740, #05b965, #07e07b, #05532f);
+    background-size: contain;
     color: white;
-    text-shadow: 4px 4px 5px rgb(20, 19, 19);
-    justify-content: center;
+    font-family: 'Merriweather', serif;
+    text-shadow: 2px 2px 3px black;
 }
 
 #container {
@@ -15,102 +12,55 @@ body {
 }
 
 .welcome {
-    font-family: 'Baloo Bhai', cursive;
     font-size: 3em;
     letter-spacing: 5px;
     text-align: center;
 }
 
 .letters, .lives {
-    font-family: 'Josefin Sans', sans-serif;
     font-size: 30px;
     text-align: center;
 }
 
 .hint {
-    font-family: 'Baloo Bhai', cursive;
     font-size: 35px;
     text-align: center;
 }
 
 #words {
-    font-family: 'Baloo Bhai', cursive;
     justify-content: center;
-    font-size: 100px;
-    font-size: 30px;
+    text-align: center;
+    font-size: 50px;
     margin: 10px;
     letter-spacing: 20px;
 }
 
 #alphabet {
-    margin: 20px;
+    margin: 0 auto;
+    width: 850px;
 }
 
-button {
-    display: inline-flex;
-    border: 2px solid rgb(212, 210, 221);
-    color: white;
-    background: rgb(75, 129, 104);
-    font-size: 50px;
-    border-radius: 5px;
-    font-family: 'Baloo Bhai';
-    justify-content: center;
-    box-shadow: 3px 3px 4px rgb(15, 15, 15);
-}
-
-button:hover {
-    color: rgb(75, 129, 104);
-    background: rgb(154, 192, 174);
-}
-
-button:active {
-    color: rgb(0, 0, 0);
-    background: rgb(231, 235, 233);
-    font-size: 45px;
+#letterChoices {
+    padding: 5px;
+    margin: 5px;
+    width: 50px;
+    height: 10%;
+    border: 2px solid white;
+    text-align: center;
+    box-shadow: 2px 2px 3px black;
 }
 
 #play {
-    margin: 20px;
-    font-size: 50px !important;
+    float: left;
+    margin: 20px auto;
+    font-size: 60px;
 }
 
 #your-guess {
-    margin: 20px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 30px;
-    color: rgb(243, 239, 239);
-}
-
-#fortune {
-    display: block;
     float: right;
-    height: 200px;
-    width: 200px;
-    margin-bottom: 50px;
+    margin-right: 5%;
+    font-size: 40px;
+    color: #bada55;
 }
 
-#fortune:hover {
-    -webkit-animation: spin 2s infinite; /* Safari 4+ */
-    -moz-animation: spin 2s infinite; /* Fx 5+ */
-    -o-animation: spin 2s infinite; /* Opera 12+ */
-    animation: spin 2s infinite;
-}
 
-@-moz-keyframes spin {
-    100% {
-        -moz-transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
