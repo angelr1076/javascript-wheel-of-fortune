@@ -17,7 +17,6 @@ var letterBoxes = document.querySelector("#alphabet");
 // let letterChoices = document.querySelector("#letterChoices");
 // let letterArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "0", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-//Start a new game
 function playGame() {
     
     guessesLeft = 6;
@@ -71,14 +70,15 @@ function matchWord(letter) {
         if (guessesLeft === 0) {
             guesses.innerHTML = "Sorry, you're out of guesses!";
             setTimeout(function() {
-                window.location.reload();
+                hint.innerHTML = "If you'd like to play again, click the spin button.";
+                letterCount.innerHTML = "You lost. You did, you truly did."
             }, 3000);
         }  
 
         if (remainingLetters === 0) {
             letterCount.innerHTML = "Great job! You guessed it!";
             setTimeout(function() {
-                window.location.reload();
+                playGame();
             }, 3000);
         }
     }
