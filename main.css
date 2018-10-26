@@ -11,6 +11,11 @@ body {
     margin: 20px;
 }
 
+#roundsWon {
+    margin-left: 15%;
+    font-size: 45px;
+}
+
 .welcome {
     font-size: 80px;
     letter-spacing: 5px;
