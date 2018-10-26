@@ -12,7 +12,7 @@ body {
 }
 
 .welcome {
-    font-size: 3em;
+    font-size: 80px;
     letter-spacing: 5px;
     text-align: center;
 }
@@ -37,14 +37,15 @@ body {
 
 #alphabet {
     margin: 0 auto;
-    width: 850px;
+    width: 990px;
 }
 
 #letterChoices {
     padding: 5px;
     margin: 5px;
-    width: 50px;
+    width: 2em;
     height: 10%;
+    font-size: 2em;
     border: 2px solid white;
     text-align: center;
     box-shadow: 2px 2px 3px black;
