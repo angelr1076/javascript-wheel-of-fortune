@@ -12,9 +12,8 @@ let guessesLeft,
     newGame = document.querySelector("#play"),
     letterBoxes = document.querySelector("#alphabet"),
     titleHeader = document.querySelector(".welcome"),
-    pointTotal = document.querySelector(".pointTotal");
-    pointTotal = 0;
-
+    pointTotal = document.querySelector(".pointTotal"),
+    score = 0;
 
 function playGame() {
     guessesLeft = 6;
@@ -84,8 +83,9 @@ function matchWord(letter) {
 
         if (remainingLetters === 0) {
             hint.innerHTML = "Great job! You guessed it!";
-            pointTotal++;
-            pointTotal.innerHTML = pointTotal;
+            score++;
+            console.log(score);
+            pointTotal.innerHTML = `${score}`;
             setTimeout(function () {
                 playGame();
             }, 3000);
