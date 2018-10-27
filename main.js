@@ -2,7 +2,6 @@ let guessesLeft,
     letterClicked,
     wordChoice,
     remainingLetters,
-    answerList = [],
     wordArray = ["JAVASCRIPT", "ARRAYS", "FUNCTIONS", "HOISTING", "RECURSION", "EVENTS", "KEYUP", "TERNARY"],
     hint = document.querySelector(".hint"),
     letterGuessed = document.querySelector("#your-guess"),
@@ -16,14 +15,16 @@ let guessesLeft,
     pointTotal = document.querySelector("#pointTotal");
 
 function playGame() {
+
     guessesLeft = 6;
     guesses.innerHTML = `You have ${guessesLeft} guesses left`;
     // Pick a random word.
     wordChoice = wordArray[Math.floor(Math.random() * wordArray.length)];
 
+    answerList = [];
+
     for (var i = 0; i < wordChoice.length; i++) {
         answerList[i] = "_";
-        console.log(answerList);
     }
     // Display underscores on page representing each letter in the random word
     wordDisplay.innerHTML = answerList.join('');
@@ -44,9 +45,13 @@ function playGame() {
     // Display number of letters in the random word on the page
     remainingLetters = wordChoice.length;
     letterCount.innerHTML = `The word is ${remainingLetters} letters long`;
+
+    // wordDisplay.childNodes.forEach(child => {
+    //     wordDisplay.removeChild(child);
+    // });
 }
 
-// Take the player’s guess.
+// Register the player’s guess.
 function buttonPress(e) {
     letterClicked = e.target.textContent;
     letterGuessed.innerHTML = `You guessed the letter ${letterClicked}`;
@@ -55,6 +60,7 @@ function buttonPress(e) {
 
 // Pass the letter event from buttonPress into the randomWord function
 function matchWord(letter) {
+    pointTotal = 0;
     if (remainingLetters > 0) {
         let foundMatch = false;
 
@@ -82,8 +88,8 @@ function matchWord(letter) {
 
         if (remainingLetters === 0) {
             hint.innerHTML = "Great job! You guessed it!";
+            pointTotal++;
             setTimeout(function () {
-
                 playGame();
             }, 3000);
         }

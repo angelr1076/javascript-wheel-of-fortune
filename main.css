@@ -3,7 +3,7 @@ body {
     background-size: contain;
     color: white;
     font-family: 'Merriweather', serif;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 3px rgb(27, 22, 22);
 }
 
 #container {
