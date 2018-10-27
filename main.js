@@ -5,17 +5,18 @@ let guessesLeft,
     wordArray = ["JAVASCRIPT", "ARRAYS", "FUNCTIONS", "HOISTING", "RECURSION", "EVENTS", "KEYUP", "TERNARY"],
     hint = document.querySelector(".hint"),
     letterGuessed = document.querySelector("#your-guess"),
-    numbers = document.querySelector("#numbers"),
+    numbers = document.querySelector(".numbers"),
     guesses = document.querySelector("#guesses"),
     wordDisplay = document.querySelector("#words"),
     letterCount = document.querySelector(".letters"),
     newGame = document.querySelector("#play"),
     letterBoxes = document.querySelector("#alphabet"),
     titleHeader = document.querySelector(".welcome"),
-    pointTotal = document.querySelector("#pointTotal");
+    pointTotal = document.querySelector(".pointTotal");
+    pointTotal = 0;
+
 
 function playGame() {
-
     guessesLeft = 6;
     guesses.innerHTML = `You have ${guessesLeft} guesses left`;
     // Pick a random word.
@@ -43,24 +44,19 @@ function playGame() {
     hint.innerHTML = `Clue: ${hintObject[wordChoice]}`;
 
     // Display number of letters in the random word on the page
-    remainingLetters = wordChoice.length;
+    remainingLetters = answerList.join('').length;
     letterCount.innerHTML = `The word is ${remainingLetters} letters long`;
-
-    // wordDisplay.childNodes.forEach(child => {
-    //     wordDisplay.removeChild(child);
-    // });
 }
 
 // Register the player’s guess.
-function buttonPress(e) {
-    letterClicked = e.target.textContent;
-    letterGuessed.innerHTML = `You guessed the letter ${letterClicked}`;
+function buttonPress(event) {
+    letterClicked = event.target.textContent;
+    letterGuessed.innerHTML = `Letter guessed: ${letterClicked}`;
     matchWord(letterClicked);
 }
 
 // Pass the letter event from buttonPress into the randomWord function
 function matchWord(letter) {
-    pointTotal = 0;
     if (remainingLetters > 0) {
         let foundMatch = false;
 
@@ -89,6 +85,7 @@ function matchWord(letter) {
         if (remainingLetters === 0) {
             hint.innerHTML = "Great job! You guessed it!";
             pointTotal++;
+            pointTotal.innerHTML = pointTotal;
             setTimeout(function () {
                 playGame();
             }, 3000);

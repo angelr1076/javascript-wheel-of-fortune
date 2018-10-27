@@ -6,13 +6,18 @@ body {
     text-shadow: 2px 2px 3px rgb(27, 22, 22);
 }
 
-#container {
+.container {
     display: block;
     margin: 20px;
 }
 
+.pointTotal {
+    font-size: 40px;
+    color: #bada55;
+}
+
 #roundsWon {
-    margin-left: 15%;
+    margin-left: 5%;
     font-size: 45px;
 }
 
@@ -35,14 +40,17 @@ body {
 #words {
     justify-content: center;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     margin: 10px;
     letter-spacing: 20px;
 }
 
-#alphabet {
-    margin: 0 auto;
-    width: 990px;
+.alphabet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 #letterChoices {
@@ -70,3 +78,38 @@ body {
 }
 
 
+@media screen and (max-width: 600px) {
+    #letterChoices {
+        margin-left: 3%;
+        height: 5%;
+        width: 9%;
+        font-size: 15px;
+    }
+    
+    #roundsWon {
+        margin-left: 10%;
+        font-size: 20px;
+    }
+    
+    .welcome {
+        font-size: 30px;
+    }
+    
+    .letters, .lives, .hint, #your-guess, #play {
+        font-size: 20px;
+    }
+    
+    #words {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .welcome {
+        display: none;
+    }
+
+    #letterChoices {
+        width: 9%;
+    }
+}
