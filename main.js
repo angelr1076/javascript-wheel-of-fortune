@@ -95,6 +95,16 @@ function matchWord(letter) {
             setTimeout(function () {
                 playGame();
             }, 3000);
+
+        if (score === 10) {
+            titleHeader.innerHTML = "Congratulations, you won!!!";
+            hint.innerHTML = "Congratulations, you won!!!";
+            titleHeader.style.color = "#ffa500";
+            hint.style.color = "#ffa500";
+            setTimeout(function () {
+                window.location.reload();
+                }, 10000);
+            }
         }
     }
 }
