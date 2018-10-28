@@ -8,8 +8,8 @@ body {
     background-position: left top;
 }
 
-html, body {
-    height: 1%;
+html {
+    height: 100%;
 } 
 
 .container {
@@ -104,7 +104,7 @@ html, body {
     
     #letterChoices {
         margin-left: 3%;
-        height: 5%;
+        height: 50px;
         width: 9%;
         font-size: 15px;
     }
@@ -147,15 +147,12 @@ html, body {
         font-size: 20px;
     }
 
-    #letterChoices {
-        width: 9%;
-    }
-
     .pointTotal {
         font-size: 15px;
     }
 
     #words {
-        font-size: 10px;
+        font-size: 15px;
+        padding: 10px;
     }
 }
