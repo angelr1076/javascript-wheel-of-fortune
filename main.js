@@ -2,7 +2,7 @@ let guessesLeft,
     letterClicked,
     wordChoice,
     remainingLetters,
-    wordArray = ["JAVASCRIPT", "ARRAYS", "FUNCTIONS", "HOISTING", "RECURSION", "EVENTS", "KEYUP", "TERNARY"],
+    wordArray = ["ASYNCHRONOUS", "BOOLEAN", "CLASS", "DOMAIN", "ELEMENT", "JAVASCRIPT", "INHERITANCE", "ARRAYS", "FUNCTIONS", "HOISTING", "SCOPE", "RECURSION", "EVENTS", "KEYUP", "TERNARY"],
     hint = document.querySelector(".hint"),
     letterGuessed = document.querySelector("#your-guess"),
     numbers = document.querySelector(".numbers"),
@@ -30,14 +30,21 @@ function playGame() {
     wordDisplay.innerHTML = answerList.join('');
 
     let hintObject = {
+        ASYNCHRONOUS: "An AJAX call...",
+        BOOLEAN: "A logical data type that can have only the values true or false",
+        CLASS: " Defines an object's characteristics",
+        DOMAIN: "An authority within the internet that controls its own resources",
+        ELEMENT: "May contain a data item or a chunk of text or an image",
         JAVASCRIPT: "The language of the web",
-        ARRAYS: "Similar to objects",
+        INHERITANCE: "Classes can have superclasses and subclasses",
+        ARRAYS: "Containers like objects",
         FUNCTIONS: "Stores instructions",
         HOISTING: "Moving declarations to the top",
         RECURSION: "Calling functions inside of functions",
-        EVENTS: "This happens to HTML elements; like a concert",
-        KEYUP: "Not 'keydown', but...",
-        TERNARY: "Type of operator"
+        EVENTS: "When an HTML button is clicked",
+        KEYUP: "Not 'click' event, but...",
+        TERNARY: "Type of operator",
+        SCOPE: "Scope is the set of variables that’s visible to a part of the program"
     }
 
     hint.innerHTML = `Clue: ${hintObject[wordChoice]}`;
@@ -84,7 +91,6 @@ function matchWord(letter) {
         if (remainingLetters === 0) {
             hint.innerHTML = "Great job! You guessed it!";
             score++;
-            console.log(score);
             pointTotal.innerHTML = `${score}`;
             setTimeout(function () {
                 playGame();

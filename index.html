@@ -14,6 +14,7 @@
 <body>
 
         <h1 class="welcome">Welcome to Word Spin!</h1>
+        <h4>The JavaScript glossary game</h4>
 
         <section class="alphabet" onclick="buttonPress(event)">
             <div class="row1">
@@ -47,7 +48,6 @@
                 <a id="letterChoices" class="waves-effect waves-light btn-large">Z</a>
             </div>
         </section>
-        <div class="container">
             <div id="header">
                 <p class="hint">Hint will display once you spin</p>
                 <p class="letters">The word is <span class="numbers">_</span> letters long</p>
@@ -55,11 +55,10 @@
                 <p id="words">_ _ _ _ _ _ _ _ _ </p>
                 <a id="play" onclick="playGame()" class="waves-effect waves-light btn-large">Spin</a>
                 <span id="roundsWon">Rounds won:
-                    <span class="pointTotal"></span>
+                    <span class="pointTotal">0</span>
                 </span>
                 <span id="your-guess">Letter guessed:</span>
             </div>
-        </div>
 
     <script src="main.js"></script>
 </body>

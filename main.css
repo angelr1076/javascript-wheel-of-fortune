@@ -1,10 +1,16 @@
 body {
     background: linear-gradient(200deg, #025302, #027740, #05b965, #07e07b, #05532f);
-    background-size: contain;
-    color: white;
+    color: #ced8ae;
     font-family: 'Merriweather', serif;
     text-shadow: 2px 2px 3px rgb(27, 22, 22);
+    background-size: auto 100%;
+    background-repeat: cover;
+    background-position: left top;
 }
+
+html, body {
+    height: 1%;
+} 
 
 .container {
     display: block;
@@ -27,7 +33,7 @@ body {
     text-align: center;
 }
 
-.letters, .lives {
+.letters, .lives, h4 {
     font-size: 30px;
     text-align: center;
 }
@@ -105,11 +111,19 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-    .welcome {
+    .welcome, h4 {
         display: none;
     }
 
     #letterChoices {
         width: 9%;
+    }
+
+    .pointTotal {
+        font-size: 15px;
+    }
+
+    #words {
+        font-size: 10px;
     }
 }
