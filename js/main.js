@@ -13,6 +13,12 @@ let newGame = document.querySelector("#play");
 let letterBoxes = document.querySelector("#alphabet");
 let titleHeader = document.querySelector(".welcome");
 let pointTotal = document.querySelector(".pointTotal");
+const correctSound = document.getElementById("correct");
+const wrongSound = document.getElementById("wrong");
+const titleSong = document.getElementById("title");
+const gameWon = document.getElementById("gameWon");
+const endGame = document.getElementById("endGame");
+const roundWon = document.getElementById("applause");
 let score = 0;
 
 function playGame() {
@@ -68,6 +74,7 @@ function matchWord(letter) {
         let foundMatch = false;
         for (let i = 0; i < wordChoice.length; i++) {
             if (wordChoice[i] === letter) {
+                correctSound.play();
                 foundMatch = true;
                 answerList[i] = letter;
                 wordDisplay.innerHTML = answerList.join(' ');
@@ -76,11 +83,13 @@ function matchWord(letter) {
         }
 
         if (!foundMatch) {
+            wrongSound.play();
             guessesLeft--;
             guesses.innerHTML = (`You have ${guessesLeft} guesses left`);
         }
 
         if (guessesLeft === 0) {
+            endGame.play();
             hint.innerHTML = "Sorry, you're out of guesses!";
             setTimeout(() => {
                 hint.innerHTML = "If you'd like to play again, click the spin button.";
@@ -89,6 +98,7 @@ function matchWord(letter) {
         }
 
         if (remainingLetters === 0) {
+            roundWon.play();
             hint.innerHTML = "Great job! You guessed it!";
             score++;
             pointTotal.innerHTML = `${score}`;
@@ -98,6 +108,7 @@ function matchWord(letter) {
         }
 
         if (score === 10) {
+            gameWon.play();
             hint.innerHTML = "Congratulations, you are the Word Spin master!!!";
             hint.style.color = "#ffa500";
             setTimeout(() => {

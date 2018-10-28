@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Word-Spin-Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
@@ -57,7 +57,12 @@
                 </span>
                 <span id="your-guess">Letter guessed:</span>
             </div>
-        <script src="main.js"></script>
+            <audio src="sounds/correct.mp3" id="correct"></audio>
+            <audio src="sounds/wrong.mp3" id="wrong"></audio>
+            <audio src="sounds/applause.mp3" id="applause"></audio>
+            <audio src="sounds/gamewon.mp3" id="gameWon" loop="loop"></audio>
+            <audio src="sounds/endgame.mp3" id="endGame" loop="loop"></audio>
+        <script src="js/main.js"></script>
     </body>
 </html>
         
