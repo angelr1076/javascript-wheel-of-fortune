@@ -1,21 +1,22 @@
-let guessesLeft,
-    letterClicked,
-    wordChoice,
-    remainingLetters,
-    wordArray = ["ASYNCHRONOUS", "BOOLEAN", "CLASS", "DOMAIN", "ELEMENT", "JAVASCRIPT", "INHERITANCE", "ARRAYS", "FUNCTIONS", "HOISTING", "SCOPE", "RECURSION", "EVENTS", "KEYUP", "TERNARY"],
-    hint = document.querySelector(".hint"),
-    letterGuessed = document.querySelector("#your-guess"),
-    numbers = document.querySelector(".numbers"),
-    guesses = document.querySelector("#guesses"),
-    wordDisplay = document.querySelector("#words"),
-    letterCount = document.querySelector(".letters"),
-    newGame = document.querySelector("#play"),
-    letterBoxes = document.querySelector("#alphabet"),
-    titleHeader = document.querySelector(".welcome"),
-    pointTotal = document.querySelector(".pointTotal"),
-    score = 0;
+let guessesLeft;
+let letterClicked;
+let wordChoice;
+let remainingLetters;
+let wordArray = ["ASYNCHRONOUS", "BOOLEAN", "CLASS", "DOMAIN", "ELEMENT", "JAVASCRIPT", "INHERITANCE", "ARRAYS", "FUNCTIONS", "HOISTING", "SCOPE", "RECURSION", "EVENTS", "KEYUP", "TERNARY"];
+let hint = document.querySelector(".hint");
+let letterGuessed = document.querySelector("#your-guess");
+let numbers = document.querySelector(".numbers");
+let guesses = document.querySelector("#guesses");
+let wordDisplay = document.querySelector("#words");
+let letterCount = document.querySelector(".letters");
+let newGame = document.querySelector("#play");
+let letterBoxes = document.querySelector("#alphabet");
+let titleHeader = document.querySelector(".welcome");
+let pointTotal = document.querySelector(".pointTotal");
+let score = 0;
 
 function playGame() {
+    
     guessesLeft = 6;
     guesses.innerHTML = `You have ${guessesLeft} guesses left`;
     // Pick a random word.
@@ -23,7 +24,7 @@ function playGame() {
 
     answerList = [];
 
-    for (var i = 0; i < wordChoice.length; i++) {
+    for (let i = 0; i < wordChoice.length; i++) {
         answerList[i] = "_";
     }
     // Display underscores on page representing each letter in the random word
@@ -44,7 +45,7 @@ function playGame() {
         EVENTS: "When an HTML button is clicked",
         KEYUP: "Not 'click' event, but...",
         TERNARY: "Type of operator",
-        SCOPE: "Scope is the set of variables that’s visible to a part of the program"
+        SCOPE: "The set of variables that’s visible to a part of the program"
     }
 
     hint.innerHTML = `Clue: ${hintObject[wordChoice]}`;
@@ -65,8 +66,7 @@ function buttonPress(event) {
 function matchWord(letter) {
     if (remainingLetters > 0) {
         let foundMatch = false;
-
-        for (var i = 0; i < wordChoice.length; i++) {
+        for (let i = 0; i < wordChoice.length; i++) {
             if (wordChoice[i] === letter) {
                 foundMatch = true;
                 answerList[i] = letter;
@@ -82,29 +82,28 @@ function matchWord(letter) {
 
         if (guessesLeft === 0) {
             hint.innerHTML = "Sorry, you're out of guesses!";
-            setTimeout(function () {
+            setTimeout(() => {
                 hint.innerHTML = "If you'd like to play again, click the spin button.";
                 letterCount.innerHTML = "You lost :(";
-            }, 3000);
+            }, 4000);
         }
 
         if (remainingLetters === 0) {
             hint.innerHTML = "Great job! You guessed it!";
             score++;
             pointTotal.innerHTML = `${score}`;
-            setTimeout(function () {
+            setTimeout(() => {
                 playGame();
-            }, 3000);
+            }, 4000);
+        }
 
         if (score === 10) {
-            titleHeader.innerHTML = "Congratulations, you won!!!";
-            hint.innerHTML = "Congratulations, you won!!!";
-            titleHeader.style.color = "#ffa500";
+            hint.innerHTML = "Congratulations, you are the Word Spin master!!!";
             hint.style.color = "#ffa500";
-            setTimeout(function () {
-                window.location.reload();
-                }, 10000);
-            }
+            setTimeout(() => {
+            window.location.replace("index.html");
+            }, 3000);
         }
     }
 }
+
