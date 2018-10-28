@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Word-Spin-Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+</head>
+    <body>
+
+        <a href="index.html" id="returnHome" class="waves-effect waves-light btn"><i class="material-icons">Return Home</i></a>
+
+        <section class="alphabet" onclick="buttonPress(event)">
+            <div class="row1">
+                <a id="letterChoices" class="waves-effect waves-light btn-large">A</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">B</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">C</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">D</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">E</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">F</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">G</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">H</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">I</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">J</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">K</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">L</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">M</a>
+            </div>
+            <div class="row2">
+                <a id="letterChoices" class="waves-effect waves-light btn-large">N</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">O</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">P</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">Q</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">R</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">S</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">T</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">U</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">V</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">W</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">X</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">Y</a>
+                <a id="letterChoices" class="waves-effect waves-light btn-large">Z</a>
+            </div>
+        </section>
+            <div id="header">
+                <p class="hint">Hint will display once you spin</p>
+                <p class="letters">The word is <span class="numbers">_</span> letters long</p>
+                <p class="lives"><span id="guesses">You have _ guesses remaining</span></p>
+                <p id="words">_ _ _ _ _ _ _ _ _ </p>
+                <a id="play" onclick="playGame()" class="waves-effect waves-light btn-large">Spin</a>
+                <span id="roundsWon">Rounds won:
+                    <span class="pointTotal">0</span>
+                </span>
+                <span id="your-guess">Letter guessed:</span>
+            </div>
+        <script src="main.js"></script>
+    </body>
+</html>
+        
