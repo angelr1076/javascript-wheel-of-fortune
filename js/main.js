@@ -19,6 +19,7 @@ const titleSong = document.getElementById("title");
 const gameWon = document.getElementById("gameWon");
 const endGame = document.getElementById("endGame");
 const roundWon = document.getElementById("applause");
+const wordContainer = document.querySelector("#letterChoices");
 let score = 0;
 
 function playGame() {
