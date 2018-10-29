@@ -74,8 +74,8 @@ function matchWord(letter) {
         let foundMatch = false;
         for (let i = 0; i < wordChoice.length; i++) {
             if (wordChoice[i] === letter) {
-                correctSound.play();
                 foundMatch = true;
+                correctSound.play();
                 answerList[i] = letter;
                 wordDisplay.innerHTML = answerList.join(' ');
                 remainingLetters--;
