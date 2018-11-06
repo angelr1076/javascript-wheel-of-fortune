@@ -15,11 +15,11 @@ let titleHeader = document.querySelector(".welcome");
 let pointTotal = document.querySelector(".pointTotal");
 const correctSound = document.getElementById("correct");
 const wrongSound = document.getElementById("wrong");
-const titleSong = document.getElementById("title");
 const gameWon = document.getElementById("gameWon");
 const endGame = document.getElementById("endGame");
 const roundWon = document.getElementById("applause");
 const wordContainer = document.querySelector("#letterChoices");
+const muteTitle = document.querySelector("#muteTitle");
 let score = 0;
 
 function playGame() {
