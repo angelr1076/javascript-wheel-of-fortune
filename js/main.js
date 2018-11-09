@@ -62,6 +62,11 @@ function playGame() {
     letterCount.innerHTML = `The word is ${remainingLetters} letters long`;
 }
 
+// Click function to restart the game
+newGame.addEventListener("click", function startNewGame() {
+    playGame();
+});
+
 // Register the player’s guess.
 function buttonPress(event) {
     letterClicked = event.target.textContent;
@@ -115,7 +120,7 @@ function matchWord(letter) {
             hint.innerHTML = "Congratulations, you are the Word Spin master!!!";
             hint.style.color = "#ffa500";
             setTimeout(() => {
-            window.location.replace("index.html");
+                window.location.replace("index.html");
             }, 3000);
         }
     }
