@@ -92,10 +92,12 @@ function matchWord(letter) {
         if (guessesLeft === 0) {
             endGame.play();
             hint.innerHTML = "Sorry, you're out of guesses!";
+            letterCount.innerHTML = "So embarrassing. You lost :(";
+            guesses.innerHTML = `The word is ${wordChoice}`;
             setTimeout(() => {
                 hint.innerHTML = "If you'd like to play again, click the spin button.";
-                letterCount.innerHTML = "You lost :(";
-            }, 4000);
+                endGame.pause();
+            }, 5000);
         }
 
         if (remainingLetters === 0) {
