@@ -3,18 +3,13 @@
 }
 
 body {
-    background: linear-gradient(100deg, #025302, #027740, #05b965, #07e07b, #05532f);
+    background: linear-gradient(100deg, #022e53, #025c77, #058fb9, #0789e0, #051a53);
     color: #ced8ae;
-    font-family: 'Merriweather', serif;
     text-shadow: 2px 2px 3px rgb(27, 22, 22);
     background-size: auto 100%;
     background-repeat: cover;
     background-position: left top;
 }
-
-html {
-    height: 100%;
-} 
 
 .container {
     display: block;
@@ -27,9 +22,36 @@ html {
 }
 
 #roundsWon {
-    margin-left: 5%;
+    margin-left: 30%;
     font-size: 45px;
 }
+
+.display-item {
+    margin-left: 10%;
+}
+
+#play {
+    float: left;
+    font-size: 25px;
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+#play:active {
+    animation: spin .2s linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotateZ(0);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+
 
 #displayChoices {
     display: flex;
@@ -106,7 +128,7 @@ h3 {
     justify-content: center;
 }
 
-.play {
+#next {
     font-size: 50px;
 }
 
@@ -139,12 +161,6 @@ h3 {
 	100% {
 		transform: rotateZ(360deg);
 	}
-}
-
-#play {
-    float: left;
-    margin: 20px auto;
-    font-size: 60px;
 }
 
 #your-guess {

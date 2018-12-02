@@ -11,11 +11,8 @@
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
 </head>
     <body>
-
-        <a href="index.html" id="returnHome" class="waves-effect waves-light btn"><i class="material-icons">Return Home</i></a>
-
         <div id="displayChoices">
-            <div class="display-item">Letters already guessed:</div>
+            <div class="display-item"></div>
         </div>
         <section class="alphabet" onclick="buttonPress(event)">
             <div class="row1">
@@ -53,8 +50,10 @@
                 <p class="hint">Hint will display once you spin</p>
                 <p class="letters">The word is <span class="numbers">_</span> letters long</p>
                 <p class="lives"><span id="guesses">You have _ guesses remaining</span></p>
-                <p id="words">_ _ _ _ _ _ _ _ _ </p>
-                <a id="play" class="waves-effect waves-light btn-large">Spin</a>
+                <p id="words"></p>
+                <button id="play" class="btn-floating btn-large waves-effect waves-light blue">Spin</button>
+                <a href="index.html" id="returnHome" class="btn-floating btn-large waves-effect waves-light blue">Back</a>
+
                 <span id="roundsWon">Rounds won:
                     <span class="pointTotal">0</span>
                 </span>

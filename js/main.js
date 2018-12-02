@@ -25,8 +25,10 @@ const muteTitle = document.querySelector("#muteTitle");
 let score = 0;
 
 const playGame = () => {
+    //total letters guessed array
     displayChoices.innerHTML = '';
     listOfGuesses = [];
+
     guessesLeft = 6;
     guesses.innerHTML = `You have ${guessesLeft} guesses left`;
     // Pick a random word.
@@ -97,7 +99,7 @@ const matchWord = letter => {
             guesses.innerHTML = `You have ${guessesLeft} guesses left`;
             listOfGuesses.push(letter);
             let convertToString = listOfGuesses.toString();
-            displayChoices.innerHTML = `Letters already guessed: ${convertToString}`;
+            displayChoices.innerHTML = `Letters you guessed: ${convertToString}`;
 
         }
 
