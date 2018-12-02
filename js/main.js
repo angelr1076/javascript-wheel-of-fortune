@@ -2,17 +2,19 @@ let guessesLeft;
 let letterClicked;
 let wordChoice;
 let remainingLetters;
+let listOfGuesses;
 let wordArray = ["ASYNCHRONOUS", "BOOLEAN", "CLASS", "DOMAIN", "ELEMENT", "JAVASCRIPT", "INHERITANCE", "ARRAYS", "FUNCTIONS", "HOISTING", "SCOPE", "RECURSION", "EVENTS", "KEYUP", "TERNARY"];
-let hint = document.querySelector(".hint");
-let letterGuessed = document.querySelector("#your-guess");
-let numbers = document.querySelector(".numbers");
-let guesses = document.querySelector("#guesses");
-let wordDisplay = document.querySelector("#words");
-let letterCount = document.querySelector(".letters");
-let newGame = document.querySelector("#play");
-let letterBoxes = document.querySelector("#alphabet");
-let titleHeader = document.querySelector(".welcome");
-let pointTotal = document.querySelector(".pointTotal");
+let displayChoices = document.querySelector('#displayChoices');
+const hint = document.querySelector(".hint");
+const letterGuessed = document.querySelector("#your-guess");
+const numbers = document.querySelector(".numbers");
+const guesses = document.querySelector("#guesses");
+const wordDisplay = document.querySelector("#words");
+const letterCount = document.querySelector(".letters");
+const newGame = document.querySelector("#play");
+const letterBoxes = document.querySelector("#alphabet");
+const titleHeader = document.querySelector(".welcome");
+const pointTotal = document.querySelector(".pointTotal");
 const correctSound = document.getElementById("correct");
 const wrongSound = document.getElementById("wrong");
 const gameWon = document.getElementById("gameWon");
@@ -22,8 +24,9 @@ const wordContainer = document.querySelector("#letterChoices");
 const muteTitle = document.querySelector("#muteTitle");
 let score = 0;
 
-function playGame() {
-    
+const playGame = () => {
+    displayChoices.innerHTML = '';
+    listOfGuesses = [];
     guessesLeft = 6;
     guesses.innerHTML = `You have ${guessesLeft} guesses left`;
     // Pick a random word.
@@ -38,8 +41,8 @@ function playGame() {
     wordDisplay.innerHTML = answerList.join('');
 
     let hintObject = {
-        ASYNCHRONOUS: "An AJAX call...",
-        BOOLEAN: "A logical data type that can have only the values true or false",
+        ASYNCHRONOUS: "An AJAX call is...",
+        BOOLEAN: "A logical data type that can have only true or false values",
         CLASS: " Defines an object's characteristics",
         DOMAIN: "An authority within the internet that controls its own resources",
         ELEMENT: "May contain a data item or a chunk of text or an image",
@@ -49,9 +52,9 @@ function playGame() {
         FUNCTIONS: "Stores instructions",
         HOISTING: "Moving declarations to the top",
         RECURSION: "Calling functions inside of functions",
-        EVENTS: "When an HTML button is clicked",
-        KEYUP: "Not 'click' event, but...",
-        TERNARY: "Type of operator",
+        EVENTS: "Several HTML buttons are clicked. These are called...",
+        KEYUP: "Not a 'click' event, but...",
+        TERNARY: "A boolean operator",
         SCOPE: "The set of variables that’s visible to a part of the program"
     }
 
@@ -63,19 +66,19 @@ function playGame() {
 }
 
 // Click function to restart the game
-newGame.addEventListener("click", function startNewGame() {
+newGame.addEventListener("click", startNewGame = () => {
     playGame();
 });
 
 // Register the player’s guess.
-function buttonPress(event) {
-    letterClicked = event.target.textContent;
+const buttonPress = e => {
+    letterClicked = e.target.textContent;
     letterGuessed.innerHTML = `Letter guessed: ${letterClicked}`;
     matchWord(letterClicked);
 }
 
 // Pass the letter event from buttonPress into the randomWord function
-function matchWord(letter) {
+const matchWord = letter => {
     if (remainingLetters > 0) {
         let foundMatch = false;
         for (let i = 0; i < wordChoice.length; i++) {
@@ -91,7 +94,11 @@ function matchWord(letter) {
         if (!foundMatch) {
             wrongSound.play();
             guessesLeft--;
-            guesses.innerHTML = (`You have ${guessesLeft} guesses left`);
+            guesses.innerHTML = `You have ${guessesLeft} guesses left`;
+            listOfGuesses.push(letter);
+            let convertToString = listOfGuesses.toString();
+            displayChoices.innerHTML = `Letters already guessed: ${convertToString}`;
+
         }
 
         if (guessesLeft === 0) {
