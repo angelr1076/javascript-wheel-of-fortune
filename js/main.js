@@ -6,7 +6,6 @@ let listOfGuesses;
 let wordArray = ["ASYNCHRONOUS", "BOOLEAN", "CLASS", "DOMAIN", "ELEMENT", "JAVASCRIPT", "INHERITANCE", "ARRAYS", "FUNCTIONS", "HOISTING", "SCOPE", "RECURSION", "EVENTS", "KEYUP", "TERNARY"];
 let displayChoices = document.querySelector('#displayChoices');
 const hint = document.querySelector(".hint");
-const letterGuessed = document.querySelector("#your-guess");
 const numbers = document.querySelector(".numbers");
 const guesses = document.querySelector("#guesses");
 const wordDisplay = document.querySelector("#words");
@@ -75,7 +74,6 @@ newGame.addEventListener("click", startNewGame = () => {
 // Register the player’s guess.
 const buttonPress = e => {
     letterClicked = e.target.textContent;
-    letterGuessed.innerHTML = `Letter guessed: ${letterClicked}`;
     matchWord(letterClicked);
 }
 

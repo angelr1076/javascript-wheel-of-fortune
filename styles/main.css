@@ -11,6 +11,10 @@ body {
     background-position: left top;
 }
 
+html {
+    height: 100%;
+}
+
 .container {
     display: block;
     margin: 20px;
@@ -22,8 +26,15 @@ body {
 }
 
 #roundsWon {
-    margin-left: 30%;
+    margin-left: 23%;
     font-size: 45px;
+}
+
+#returnHome {
+    float: right;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 15%;
 }
 
 .display-item {
@@ -33,7 +44,7 @@ body {
 #play {
     float: left;
     font-size: 25px;
-    margin-left: 20px;
+    margin-left: 10%;
     width: 100px;
     height: 100px;
 }
@@ -51,7 +62,6 @@ body {
 		transform: rotateZ(360deg);
 	}
 }
-
 
 #displayChoices {
     display: flex;
@@ -120,10 +130,11 @@ h3 {
 #playGame {
     display: flex;
     font-size: 40px;
-    margin-left: 35%;
+    margin-left: 40%;
     margin-top: 15%;
-    width: 300px;
+    width: 200px;
     height: 100px;
+    border-radius: 5px;
     align-items: center;
     justify-content: center;
 }
