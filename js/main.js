@@ -42,12 +42,12 @@ const playGame = () => {
 
     let hintObject = {
         ASYNCHRONOUS: "An AJAX call is...",
-        BOOLEAN: "A logical data type that can have only true or false values",
+        BOOLEAN: "A logical data type: true or false values",
         CLASS: " Defines an object's characteristics",
-        DOMAIN: "An authority within the internet that controls its own resources",
-        ELEMENT: "May contain a data item or a chunk of text or an image",
+        DOMAIN: "Defined by the IP address",
+        ELEMENT: "Defines a fragment of computer code",
         JAVASCRIPT: "The language of the web",
-        INHERITANCE: "Classes can have superclasses and subclasses",
+        INHERITANCE: "Enables new objects to take on the properties of existing objects",
         ARRAYS: "Containers like objects",
         FUNCTIONS: "Stores instructions",
         HOISTING: "Moving declarations to the top",
