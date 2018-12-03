@@ -19,7 +19,6 @@ const wrongSound = document.getElementById("wrong");
 const gameWon = document.getElementById("gameWon");
 const endGame = document.getElementById("endGame");
 const roundWon = document.getElementById("applause");
-const wordContainer = document.querySelector("#letterChoices");
 const muteTitle = document.querySelector("#muteTitle");
 let score = 0;
 
