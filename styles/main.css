@@ -8,7 +8,7 @@ body {
     text-shadow: 2px 2px 3px rgb(27, 22, 22);
     background-size: auto 100%;
     height: 100%;
-    background-repeat: contain;
+    background-repeat: cover;
     background-position: left top;
 }
 
@@ -128,7 +128,7 @@ h3 {
     text-align: center;
     font-size: 40px;
     margin: 10px;
-    letter-spacing: 20px;
+    letter-spacing: 10px;
 }
 
 #playGame {
@@ -168,8 +168,12 @@ h3 {
     animation-iteration-count: 1;
 }
 
+#letterChoices:hover {
+    background-color: rgb(10, 116, 216);
+}
+
 #letterChoices:active {
-    
+    background-color: rgb(7, 7, 194);
 }
 
 @keyframes spin {
@@ -218,7 +222,7 @@ h3 {
     }
     
     #words {
-        font-size: 20px;
+        font-size: 15px;
     }
 }
 
