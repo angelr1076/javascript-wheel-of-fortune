@@ -1,9 +1,9 @@
 # word-spin
 The JavaScript glossary learning game. Have fun playing!
 
-Win ten in a row and you're the Word-spin champ!
+You have six chances to guess each word correctly. 
 
-The game was written in vanille JavaScript with lots of love.
+Win ten in a row and you're the Word-spin champ!
 
 ![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1544467843/Screen_Shot_2018-12-10_at_1.46.55_PM.png)
 
