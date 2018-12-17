@@ -3,7 +3,7 @@ let letterClicked;
 let wordChoice;
 let remainingLetters;
 let listOfGuesses;
-let wordArray = ["ASYNCHRONOUS", "BOOLEAN", "CLASS", "DOMAIN", "ELEMENT", "JAVASCRIPT", "INHERITANCE", "ARRAYS", "FUNCTIONS", "HOISTING", "SCOPE", "RECURSION", "EVENTS", "KEYUP", "TERNARY"];
+const wordArray = ["ASYNCHRONOUS", "BOOLEAN", "CLASS", "DOMAIN", "ELEMENT", "JAVASCRIPT", "INHERITANCE", "ARRAYS", "FUNCTIONS", "HOISTING", "SCOPE", "RECURSION", "EVENTS", "KEYUP", "TERNARY"];
 let displayChoices = document.querySelector('#displayChoices');
 const hint = document.querySelector(".hint");
 const numbers = document.querySelector(".numbers");
@@ -95,9 +95,8 @@ const matchWord = letter => {
             guessesLeft--;
             guesses.innerHTML = `You have ${guessesLeft} guesses left`;
             listOfGuesses.push(letter);
-            let convertToString = listOfGuesses.toString();
+            convertToString = listOfGuesses.join(',  ');
             displayChoices.innerHTML = `Letters you guessed: ${convertToString}`;
-
         }
 
         if (guessesLeft === 0) {
