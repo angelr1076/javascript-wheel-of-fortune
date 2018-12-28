@@ -66,7 +66,7 @@ const playGame = () => {
 }
 
 // Click function to restart the game
-newGame.addEventListener("click", startNewGame = () => {
+newGame.addEventListener("click", () => {
     playGame();
 });
 
